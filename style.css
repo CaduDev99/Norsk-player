@@ -381,3 +381,47 @@ input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 14p
     .player-panel.maximized { display: flex; }
     .volume-container { width: 80%; }
 }
+/* Correção 1: Ocultar completamente elementos com a classe .hidden */
+.hidden {
+    display: none !important;
+}
+
+/* Correção 2: Centralizar perfeitamente o Equalizador ao redor do Escudo */
+.shield-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 14px auto;
+}
+
+#visualizer-canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.viking-shield {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+}
+
+/* Correção 3: Alinhamento do título da barra superior no Mobile */
+.top-bar {
+    position: relative;
+}
+
+.top-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
